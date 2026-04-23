@@ -1,0 +1,2762 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukaaa</title>
+    <style>
+/* Font CSS - Inter & JetBrains Mono */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD7OwE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Font Awesome */
+.fa{font-family:var(--fa-style-family,"Font Awesome 6 Free");font-weight:var(--fa-style,900)}.fa,.fa-brands,.fa-classic,.fa-regular,.fa-sharp,.fa-solid,.fab,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:var(--fa-display,inline-block);font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}.fa-classic,.fa-regular,.fa-solid,.far,.fas{font-family:"Font Awesome 6 Free"}.fa-brands,.fab{font-family:"Font Awesome 6 Brands"}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-2xs{font-size:.625em;line-height:.1em;vertical-align:.225em}.fa-xs{font-size:.75em;line-height:.08333em;vertical-align:.125em}.fa-sm{font-size:.875em;line-height:.07143em;vertical-align:.05357em}.fa-lg{font-size:1.25em;line-height:.05em;vertical-align:-.075em}.fa-xl{font-size:1.5em;line-height:.04167em;vertical-align:-.125em}.fa-2xl{font-size:2em;line-height:.03125em;vertical-align:-.1875em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:var(--fa-li-margin,2.5em);padding-left:0}.fa-ul>li{position:relative}.fa-li{left:calc(var(--fa-li-width, 2em)*-1);position:absolute;text-align:center;width:var(--fa-li-width,2em);line-height:inherit}.fa-border{border-radius:var(--fa-border-radius,.1em);border:var(--fa-border-width,.08em) var(--fa-border-style,solid) var(--fa-border-color,#eee);padding:var(--fa-border-padding,.2em .25em .15em)}.fa-pull-left{float:left;margin-right:var(--fa-pull-margin,.3em)}.fa-pull-right{float:right;margin-left:var(--fa-pull-margin,.3em)}.fa-beat{-webkit-animation-name:fa-beat;animation-name:fa-beat;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-bounce{-webkit-animation-name:fa-bounce;animation-name:fa-bounce;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.28,.84,.42,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.28,.84,.42,1))}.fa-fade{-webkit-animation-name:fa-fade;animation-name:fa-fade;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-beat-fade{-webkit-animation-name:fa-beat-fade;animation-name:fa-beat-fade;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-flip{-webkit-animation-name:fa-flip;animation-name:fa-flip;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-shake{-webkit-animation-name:fa-shake;animation-name:fa-shake;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,linear);animation-timing-function:var(--fa-animation-timing,linear)}.fa-solid,.fas{font-weight:900}.fa-regular,.far{font-weight:400}.fa-brands,.fab{font-weight:400}.fa-1:before{content:"\31"}.fa-2:before{content:"\32"}.fa-3:before{content:"\33"}.fa-4:before{content:"\34"}.fa-5:before{content:"\35"}.fa-6:before{content:"\36"}.fa-7:before{content:"\37"}.fa-8:before{content:"\38"}.fa-9:before{content:"\39"}.fa-envelope:before{content:"\f0e0"}.fa-arrow-right:before{content:"\f061"}.fa-code:before{content:"\f121"}.fa-clock:before{content:"\f017"}.fa-volume-up:before{content:"\f028"}.fa-volume-mute:before{content:"\f6a9"}.fa-discord:before{content:"\f392"}.fa-github:before{content:"\f09b"}.fa-spotify:before{content:"\f1bc"}:host,:root{--fa-style-family-brands:"Font Awesome 6 Brands";--fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands"}@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.ttf) format("truetype")}.fa-brands,.fab{font-weight:400}.fa-discord:before{content:"\f392"}.fa-github:before{content:"\f09b"}.fa-spotify:before{content:"\f1bc"}:host,:root{--fa-style-family-classic:"Font Awesome 6 Free";--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Free"}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.ttf) format("truetype")}.fa-solid,.fas{font-weight:900}.fa-envelope:before{content:"\f0e0"}.fa-arrow-right:before{content:"\f061"}.fa-code:before{content:"\f121"}.fa-clock:before{content:"\f017"}.fa-volume-up:before{content:"\f028"}.fa-volume-mute:before{content:"\f6a9"}
+
+/* Main Styles */
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #111111;
+    --bg-card: #151515;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #888888;
+    --text-dim: #555555;
+    --border-primary: #222222;
+    --border-secondary: #333333;
+    --border-hover: #444444;
+    --shadow-light: rgba(255, 255, 255, 0.05);
+    --shadow-dark: rgba(0, 0, 0, 0.8);
+    
+    --discord-online: #23a55a;
+    --discord-idle: #f0b232;
+    --discord-dnd: #f23f43;
+    --discord-offline: #80848e;
+    --spotify-green: #1db954;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none !important;
+}
+
+*::selection {
+    background: #333333;
+    color: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: var(--text-dim);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float linear infinite;
+}
+
+.particle:nth-child(1) { left: 10%; animation-duration: 25s; animation-delay: 0s; }
+.particle:nth-child(2) { left: 20%; animation-duration: 30s; animation-delay: 5s; width: 2px; height: 2px; }
+.particle:nth-child(3) { left: 35%; animation-duration: 20s; animation-delay: 10s; }
+.particle:nth-child(4) { left: 50%; animation-duration: 28s; animation-delay: 2s; }
+.particle:nth-child(5) { left: 65%; animation-duration: 22s; animation-delay: 8s; width: 1.5px; height: 1.5px; }
+.particle:nth-child(6) { left: 80%; animation-duration: 26s; animation-delay: 12s; }
+.particle:nth-child(7) { left: 15%; animation-duration: 24s; animation-delay: 6s; }
+.particle:nth-child(8) { left: 90%; animation-duration: 32s; animation-delay: 15s; }
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(30px);
+        opacity: 0;
+    }
+}
+
+.ambient-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.01) 0%, transparent 50%);
+    z-index: 0;
+    animation: ambientPulse 15s ease-in-out infinite;
+}
+
+@keyframes ambientPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    gap: 40px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.widgets-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.widget {
+    background: var(--bg-card);
+    border: 1px solid var(--border-primary);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px var(--shadow-dark);
+    transition: all 0.3s ease;
+    animation: slideInLeft 1s ease-out;
+}
+
+.widget:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 12px 40px var(--shadow-dark);
+    transform: translateY(-2px);
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.widget-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.widget-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-secondary);
+}
+
+.widget-icon i {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.widget-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--discord-offline);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.status-indicator.online { background: var(--discord-online); }
+.status-indicator.idle { background: var(--discord-idle); }
+.status-indicator.dnd { background: var(--discord-dnd); }
+.status-indicator.offline { background: var(--discord-offline); }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.discord-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--border-secondary);
+    transition: all 0.3s ease;
+}
+
+.avatar:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 0 20px var(--shadow-light);
+}
+
+.status-badge {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid var(--bg-card);
+    background: var(--discord-offline);
+}
+
+.status-badge.online { background: var(--discord-online); }
+.status-badge.idle { background: var(--discord-idle); }
+.status-badge.dnd { background: var(--discord-dnd); }
+.status-badge.offline { background: var(--discord-offline); }
+
+.profile-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.activity {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.spotify-widget .widget-icon {
+    color: var(--spotify-green);
+}
+
+.playback-status {
+    display: flex;
+    align-items: center;
+}
+
+.play-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--discord-offline);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.play-indicator.playing {
+    background: var(--spotify-green);
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.spotify-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.track-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.track-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist-name {
+    font-size: 13px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.album-container {
+    flex-shrink: 0;
+}
+
+.album-art {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    border: 2px solid var(--border-secondary);
+    object-fit: cover;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.album-art:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 0 20px var(--shadow-light);
+}
+
+.album-art.visible {
+    display: block;
+}
+
+.album-container.hidden {
+    display: none;
+}
+
+.progress-container {
+    display: none;
+}
+
+.progress-container.visible {
+    display: block;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--bg-tertiary);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--text-secondary);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.profile-section {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-primary);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px var(--shadow-dark);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-secondary), transparent);
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.profile-avatar {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.main-avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--border-secondary);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.avatar-border {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 2px solid var(--border-primary);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.profile-avatar:hover .avatar-border {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+.profile-avatar:hover .main-avatar-img {
+    border-color: var(--border-hover);
+    box-shadow: 0 0 30px var(--shadow-light);
+}
+
+.profile-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.display-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    position: relative;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.name-text {
+    color: var(--text-primary);
+    position: relative;
+}
+
+.name-text::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--text-secondary);
+    transition: width 0.3s ease;
+}
+
+.display-name:hover .name-text::after {
+    width: 100%;
+}
+
+.bio-section {
+    margin-bottom: 20px;
+}
+
+.bio-text {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 0;
+    line-height: 1.4;
+    min-height: 20px;
+}
+
+.typing-text {
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cursor-blink {
+    animation: blink 1s infinite;
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.status-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    border-radius: 16px;
+    display: inline-flex;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--discord-offline);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.status-dot.online { background: var(--discord-online); }
+.status-dot.idle { background: var(--discord-idle); }
+.status-dot.dnd { background: var(--discord-dnd); }
+.status-dot.offline { background: var(--discord-offline); }
+
+.status-text {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-primary), transparent);
+    margin: 30px 0;
+}
+
+.social-links {
+    margin-bottom: 30px;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+.social-link:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--shadow-dark);
+}
+
+.link-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.social-link:hover .link-icon {
+    background: var(--bg-primary);
+    border-color: var(--border-secondary);
+    color: var(--text-primary);
+}
+
+.link-icon i {
+    font-size: 18px;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.social-link:hover .link-icon i {
+    color: var(--text-primary);
+}
+
+.link-label {
+    font-weight: 500;
+    font-size: 16px;
+    flex: 1;
+}
+
+.link-arrow {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    color: var(--text-muted);
+}
+
+.social-link:hover .link-arrow {
+    opacity: 1;
+    transform: translateX(0);
+    color: var(--text-primary);
+}
+
+.footer {
+    border-top: 1px solid var(--border-primary);
+    padding-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.copyright,
+.last-seen {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copyright i,
+.last-seen i {
+    font-size: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-site * {
+    cursor: none !important;
+}
+
+.entry-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+}
+
+.entry-page.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.entry-container {
+    text-align: center;
+    position: relative;
+}
+
+.entry-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.entry-text:hover {
+    opacity: 0.7;
+}
+
+.audio-control {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #333333;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.audio-control.visible {
+    display: flex !important;
+}
+
+.audio-control:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #555555;
+    transform: scale(1.1);
+}
+
+.audio-control.muted {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: #ff4444;
+}
+
+.audio-control.muted .fas {
+    color: #ff4444;
+}
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    z-index: 99999;
+    mix-blend-mode: difference;
+}
+
+.cursor-dot {
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease;
+}
+
+.cursor-ring {
+    width: 24px;
+    height: 24px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.cursor.hover .cursor-dot {
+    width: 6px;
+    height: 6px;
+}
+
+.cursor.hover .cursor-ring {
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+    .main-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .widgets-section {
+        width: 100%;
+        max-width: 600px;
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .widget {
+        flex: 1;
+        animation: fadeInUp 1s ease-out;
+    }
+}
+
+@media (max-width: 768px) {
+    .widgets-section {
+        flex-direction: column;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .main-avatar-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .display-name {
+        font-size: 28px;
+    }
+    
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 15px;
+    }
+    
+    .profile-card {
+        padding: 25px 20px;
+    }
+    
+    .widget {
+        padding: 20px;
+    }
+    
+    .display-name {
+        font-size: 24px;
+    }
+    
+    .particles-container {
+        display: none;
+    }
+}
+
+.main-site {
+    animation: siteEnter 1s ease-out;
+}
+
+@keyframes siteEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-secondary);
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 280px;
+}
+
+.notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notification.success {
+    border-color: #22c55e;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+}
+
+.notification.error {
+    border-color: #ef4444;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+}
+
+.notification-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.notification.success .notification-icon {
+    color: #22c55e;
+}
+
+.notification.error .notification-icon {
+    color: #ef4444;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.notification-message {
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+.social-link.copying {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Badges Styles */
+.badges-container {
+    display: flex;
+    gap: 1px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 6px;
+    display: inline-flex;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+.badge {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.badge:hover {
+    transform: scale(1.15);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.badge img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.badge::after {
+    display: none;
+}
+
+.discord-badge {
+    background: rgba(88, 101, 242, 0.25);
+    border: 1px solid rgba(88, 101, 242, 0.5);
+}
+
+.discord-badge:hover {
+    background: rgba(88, 101, 242, 0.35);
+}
+
+.display-name {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.name-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.badges-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.badge:hover {
+    transform: scale(1.2);
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.badge img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.badge-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    margin-bottom: 5px;
+}
+
+.badge:hover .badge-tooltip {
+    opacity: 1;
+}
+
+.badge-link {
+    text-decoration: none;
+    display: block;
+}
+
+.entry-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.entry-text {
+    font-size: 12.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.entry-text:hover {
+    transform: scale(1.1);
+}
+
+.audio-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(25, 25, 25, 0.9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+    opacity: 0;
+}
+
+.audio-control.visible {
+    opacity: 1;
+}
+
+.audio-control:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+}
+
+.audio-control.muted {
+    background: rgba(80, 80, 80, 0.9);
+}
+    </style>
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;%F0%9F%92%A2&lt;/text&gt;&lt;/svg&gt;">
+    <style>
+        .badges-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            position: relative;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .badge:hover {
+            transform: scale(1.2);
+            border-color: #fff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .badge img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .badge-tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+            margin-bottom: 5px;
+        }
+
+        .badge:hover .badge-tooltip {
+            opacity: 1;
+        }
+
+        .badge-link {
+            text-decoration: none;
+            display: block;
+        }
+
+        .entry-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .entry-text {
+            font-size: 12.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+        }
+
+        .entry-text:hover {
+            transform: scale(1.1);
+        }
+
+        .audio-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: rgba(25, 25, 25, 0.9);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 20px;
+            opacity: 0;
+        }
+        
+        .audio-control.visible {
+            opacity: 1;
+        }
+        
+        .audio-control:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+        }
+        
+        .audio-control.muted {
+            background: rgba(80, 80, 80, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor" style="transform: translate(727px, 377px);">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <div class="entry-page fade-out" id="entry-page" style="display: none;">
+        <div class="entry-container">
+            <div class="entry-text" id="entry-button">
+                💢
+            </div>
+        </div>
+    </div>
+
+    <audio id="background-music" loop="" preload="auto">
+        <source src="https://mp3tourl.com/audio/1776966707813-895b0bcd-d83a-4890-9f77-5aa7d3ab81aa.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'audio HTML5.
+    </audio>
+
+    <div class="audio-control visible" id="audio-control">
+        <i class="fas fa-volume-up" id="audio-icon"></i>
+    </div>
+
+    <div class="main-site" id="main-site" style="display: block;">
+        <div class="particles-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="ambient-overlay"></div>
+        
+        <div class="main-container">
+            <div class="widgets-section">
+                <div class="widget discord-widget">
+                    <div class="widget-header">
+                        <div class="widget-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <span class="widget-title">Discord</span>
+                        <div class="status-indicator dnd" id="discord-status-dot"></div>
+                    </div>
+                    <div class="widget-content">
+                        <div class="discord-profile">
+                            <div class="avatar-container">
+                                <img id="discord-avatar" src="https://i.imgur.com/WC5qjnN.jpeg" alt="Discord Avatar" class="avatar">
+                                <div class="status-badge dnd" id="discord-status"></div>
+                            </div>
+                            <div class="profile-info">
+                                <span class="username" id="discord-username">!    Lukaaa1337🪐</span>
+                                <div class="activity" id="discord-activity">
+                                    <span class="activity-text">Do Not Disturb</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="widget spotify-widget">
+                    <div class="widget-header">
+                        <div class="widget-icon">
+                            <img src="https://i.imgur.com/Gse9UX3.png" alt="Spotify" style="width: 20px; height: 20px;">
+                        </div>
+                        <span class="widget-title">Spotify</span>
+                        <div class="playback-status">
+                            <div class="play-indicator" id="spotify-playing"></div>
+                        </div>
+                    </div>
+                    <div class="widget-content">
+                        <div class="spotify-info">
+                            <div class="track-details">
+                                <span class="track-name" id="spotify-track">Not playing</span>
+                                <span class="artist-name" id="spotify-artist">⏯</span>
+                            </div>
+                            <div class="album-container hidden">
+                                <img id="spotify-album" src="https://Lukaaa.baby/" alt="Album Art" class="album-art">
+                            </div>
+                        </div>
+                        <div class="progress-container" id="spotify-progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="spotify-progress"></div>
+                            </div>
+                            <div class="time-info">
+                                <span class="current-time" id="current-time">2:10</span>
+                                <span class="total-time" id="total-time">2:46</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-section">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img id="main-avatar" src="https://i.imgur.com/WC5qjnN.jpeg" alt="c" class="main-avatar-img">
+                            <div class="avatar-border"></div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <h1 class="display-name">
+                                <span class="name-text">! Lukaaa1337🪐</span>
+                                <span class="badges-container" id="badges-container">
+                                    <!-- Badges werden hier per JavaScript eingefügt -->
+                                </span>
+                            </h1>
+                            
+                            <div class="bio-section">
+                                <p class="bio-text">
+                                    <span class="typing-text">why are you here nogga</span>
+                                    <span class="cursor-blink">|</span>
+                                </p>
+                            </div>
+                            
+                            <div class="status-info">
+                                <div class="status-dot dnd" id="main-status-dot"></div>
+                                <span class="status-text" id="main-status-text">Do not disturb - Busy</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div class="social-links">
+                        <div class="links-grid">
+                            <a href="https://guns.lol/Skid1337" class="social-link" data-link="https://guns.lol/Skid1337" data-platform="guns.lol" target="_blank" rel="noopener">
+                                <div class="link-icon">
+                                    <img src="https://i.imgur.com/HEYjyICh.jpg" alt="guns.lol" style="width: 24px; height: 24px; border-radius: 4px;">
+                                </div>
+                                <span class="link-label">guns.lol</span>
+                                <div class="link-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                            
+                            <a href="https://github.com/Lukaaa1337" class="social-link" data-link="https://github.com/Lukaaa1337" data-platform="GitHub" target="_blank" rel="noopener">
+                                <div class="link-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <span class="link-label">GitHub</span>
+                                <div class="link-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                            
+                            <a href="https://open.spotify.com/user/31w6kvnphwdfndlsqcm6e33hmeea" class="social-link" data-link="https://open.spotify.com/user/31w6kvnphwdfndlsqcm6e33hmeea" data-platform="Spotify" target="_blank" rel="noopener">
+                                <div class="link-icon">
+                                    <i class="fab fa-spotify"></i>
+                                </div>
+                                <span class="link-label">Spotify</span>
+                                <div class="link-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                            
+                            <a href="https://discord.com/invite/MUNhRMwMXD" class="social-link" data-link="https://discord.com/invite/MUNhRMwMXD" data-platform="HexTweaks" target="_blank" rel="noopener">
+                                <div class="link-icon">
+                                    <i class="fab fa-discord"></i>
+                                </div>
+                                <span class="link-label">HexTweaks</span>
+                                <div class="link-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer">
+                        <div class="footer-content">
+                            <div class="copyright">
+                                <i class="fas fa-code"></i>
+                                <span>© 2026 - Lukaaa</span>
+                            </div>
+                            <div class="last-seen">
+                                <i class="fas fa-clock"></i>
+                                <span id="last-seen">Last seen: 999999 YEARS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Audio Control Funktion
+        function initializeAudioControl() {
+            const audioControl = document.getElementById('audio-control');
+            const audioIcon = document.getElementById('audio-icon');
+            const backgroundMusic = document.getElementById('background-music');
+            
+            let isMuted = false;
+            
+            if (audioControl && audioIcon && backgroundMusic) {
+                // Klick-Event für Mute/Unmute
+                audioControl.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    isMuted = !isMuted;
+                    
+                    if (isMuted) {
+                        // Musik stummschalten
+                        backgroundMusic.muted = true;
+                        audioIcon.className = 'fas fa-volume-mute';
+                        audioControl.classList.add('muted');
+                        console.log('🔇 Musik stummgeschaltet');
+                    } else {
+                        // Musik laut schalten
+                        backgroundMusic.muted = false;
+                        audioIcon.className = 'fas fa-volume-up';
+                        audioControl.classList.remove('muted');
+                        console.log('🔊 Musik laut geschaltet');
+                    }
+                });
+                
+                console.log("✅ Audio Control initialisiert");
+            } else {
+                console.log("❌ Audio Elemente nicht gefunden");
+            }
+        }
+
+        // Entry Page Funktion
+        function initializeEntryPage() {
+            const entryPage = document.getElementById('entry-page');
+            const mainSite = document.getElementById('main-site');
+            const audioControl = document.getElementById('audio-control');
+            
+            if (entryPage) {
+                entryPage.addEventListener('click', function() {
+                    // Audio Control sichtbar machen
+                    if (audioControl) {
+                        audioControl.classList.add('visible');
+                    }
+                    
+                    // Main Site anzeigen
+                    if (mainSite) {
+                        entryPage.style.display = 'none';
+                        mainSite.style.display = 'block';
+                    }
+                    
+                    // Badges initialisieren
+                    initializeBadges();
+                });
+            }
+        }
+
+        
+        // Badges initialisieren
+        function initializeBadges() {
+            const badgesContainer = document.getElementById('badges-container');
+            
+            if (!badgesContainer) {
+                console.log("❌ Badges Container nicht gefunden");
+                return;
+            }
+
+            // Leere Container zuerst
+            badgesContainer.innerHTML = '';
+
+            console.log(`🔄 Lade ${badges.length} Badges...`);
+
+            // Erstelle jedes Badge
+            badges.forEach(badge => {
+                const badgeElement = document.createElement('a');
+                badgeElement.href = badge.link;
+                badgeElement.target = "_blank";
+                badgeElement.className = 'badge-link';
+                
+                badgeElement.innerHTML = `
+                    <div class="badge" data-badge-id="${badge.id}">
+                        <img src="${badge.image}" alt="${badge.name}" 
+                             onerror="this.src='https://via.placeholder.com/32/333333/ffffff?text=?'">
+                        <div class="badge-tooltip">${badge.tooltip}</div>
+                    </div>
+                `;
+
+                badgesContainer.appendChild(badgeElement);
+                console.log(`✅ Badge geladen: ${badge.name}`);
+            });
+
+            console.log(`🎉 ${badges.length} Badges erfolgreich geladen`);
+        }
+
+        // Beim Laden der Seite initialisieren
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("🚀 Website wird geladen...");
+            initializeAudioControl();
+            initializeEntryPage();
+            
+            // Test: Badges Container existiert?
+            const badgesContainer = document.getElementById('badges-container');
+            if (badgesContainer) {
+                console.log("✅ Badges Container gefunden");
+            } else {
+                console.log("❌ Badges Container NICHT gefunden");
+            }
+        });
+
+    </script>
+    <script>
+const CONFIG = {
+    DISCORD_USER_ID: '1250658765632438346',
+    SPOTIFY_CLIENT_ID: '3229e0ff2c394ff1b5b8cb29e12b2f81',
+    UPDATE_INTERVAL: 30000,
+    SPOTIFY_UPDATE_INTERVAL: 5000
+};
+
+let currentDiscordHandle = '@skid';
+let lastDiscordUpdate = 0;
+let lastSpotifyUpdate = 0;
+let spotifyProgress = 0;
+let spotifyDuration = 0;
+let spotifyCurrentTime = 0;
+let progressInterval = null;
+let backgroundMusic = null;
+let hasEnteredSite = false;
+let isMuted = false;
+let currentSpotifyData = null;
+
+const BADGES = {
+    'active_developer': 'https://cdn.discordapp.com/badge-icons/6d2cf6fa7891f4c94fbe3d0a9ca6173c.png',
+    'bug_hunter': 'https://cdn.discordapp.com/badge-icons/7ad8970d63c127d901a0895610c6f2d6.png',
+    'bug_hunter_level_2': 'https://cdn.discordapp.com/badge-icons/0e2b3b45e56c7c972f6c0e8d90b0c439.png',
+    'early_supporter': 'https://cdn.discordapp.com/badge-icons/7065d4a6d3b7b38b3061b9099739296a.png',
+    'hypesquad': 'https://cdn.discordapp.com/badge-icons/bf01d1076bd3241a48ddc12c4b4065f7.png',
+    'partner': 'https://cdn.discordapp.com/badge-icons/3cf6a76d3b7b38b3061b9099739296a7.png',
+    'verified_bot_developer': 'https://cdn.discordapp.com/badge-icons/6d2cf6fa7891f4c94fbe3d0a9ca6173c.png',
+    'verified_developer': 'https://cdn.discordapp.com/badge-icons/6d2cf6fa7891f4c94fbe3d0a9ca6173c.png',
+    'nitro': 'https://cdn.discordapp.com/badge-icons/2ba85e8026a8614b640c2837bcdfe21b.png',
+    'boost': 'https://cdn.discordapp.com/badge-icons/3aa7a7a7a7a7a7a7a7a7a7a7a7a7a7a7.png',
+    'skid': 'https://files.catbox.moe/79kq2w.png',
+    'c++': 'https://cdn-icons-png.flaticon.com/512/6132/6132222.png'
+};
+
+const badges = [
+    { id: 'nitro', name: 'Nitro', image: BADGES.nitro, link: '#', tooltip: 'Nitro' }
+];
+
+document.addEventListener('DOMContentLoaded', function() {
+    initializeCursor();
+    initializeEntryPage();
+});
+
+function initializeCursor() {
+    const cursor = document.querySelector('.cursor');
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorRing = document.querySelector('.cursor-ring');
+    
+    if (!cursor) return;
+    
+    let mouseX = 0;
+    let mouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+    
+    function updateCursor() {
+        cursorX += (mouseX - cursorX) * 0.15;
+        cursorY += (mouseY - cursorY) * 0.15;
+        
+        cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+        requestAnimationFrame(updateCursor);
+    }
+    updateCursor();
+    
+    const interactiveElements = document.querySelectorAll('a, .avatar, .main-avatar-img, .album-art, .social-link, .entry-text, .audio-control, .badge');
+    
+    interactiveElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+        });
+        
+        element.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+        });
+    });
+}
+
+function initializeEntryPage() {
+    const entryPage = document.getElementById('entry-page');
+    const entryButton = document.getElementById('entry-button');
+    const mainSite = document.getElementById('main-site');
+    const audioControl = document.getElementById('audio-control');
+    const audioIcon = document.getElementById('audio-icon');
+    
+    backgroundMusic = document.getElementById('background-music');
+    
+    // Set volume to 50%
+    if (backgroundMusic) {
+        backgroundMusic.volume = 0.5;
+    }
+    
+    audioControl.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleAudio();
+    });
+    
+    entryButton.addEventListener('click', function() {
+        if (hasEnteredSite) return;
+        hasEnteredSite = true;
+        
+        audioControl.classList.add('visible');
+        
+        if (backgroundMusic && !isMuted) {
+            backgroundMusic.currentTime = 0;
+            backgroundMusic.volume = 0.5;
+            
+            // Try to play music
+            const playPromise = backgroundMusic.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    console.log('Music started successfully');
+                }).catch(error => {
+                    console.log('Error starting music:', error);
+                    // Try again after a short delay
+                    setTimeout(() => {
+                        backgroundMusic.play().catch(e => console.log('Retry failed:', e));
+                    }, 500);
+                });
+            }
+            
+            backgroundMusic.addEventListener('ended', function() {
+                if (!isMuted) {
+                    this.currentTime = 0;
+                    this.play();
+                }
+            });
+        }
+        
+        entryPage.classList.add('fade-out');
+        
+        setTimeout(() => {
+            entryPage.style.display = 'none';
+            mainSite.style.display = 'block';
+            
+            initializeMainSite();
+        }, 800);
+    });
+
+    function toggleAudio() {
+        const audioControl = document.getElementById('audio-control');
+        const audioIcon = document.getElementById('audio-icon');
+        
+        isMuted = !isMuted;
+        
+        if (isMuted) {
+            if (backgroundMusic) {
+                backgroundMusic.pause();
+            }
+            audioIcon.className = 'fas fa-volume-mute';
+            audioControl.classList.add('muted');
+            console.log('Music muted');
+        } else {
+            if (backgroundMusic && hasEnteredSite) {
+                backgroundMusic.volume = 0.5;
+                const playPromise = backgroundMusic.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        console.log('Music resumed');
+                    }).catch(error => {
+                        console.log('Error resuming music:', error);
+                    });
+                }
+            }
+            audioIcon.className = 'fas fa-volume-up';
+            audioControl.classList.remove('muted');
+        }
+    }
+}
+
+function initializeMainSite() {
+    initializeTypingEffect();
+    initializeLastSeen();
+    updateDiscordStatus();
+    updateSpotifyStatus();
+    initializeBadges();
+    initializeSpotifyWidget();
+    
+    setInterval(updateDiscordStatus, CONFIG.UPDATE_INTERVAL);
+    setInterval(updateSpotifyStatus, CONFIG.SPOTIFY_UPDATE_INTERVAL);
+    setInterval(updateLastSeen, 60000);
+    
+    setInterval(updateSpotifyProgress, 1000);
+}
+
+function initializeSpotifyWidget() {
+    const spotifyWidget = document.querySelector('.spotify-widget');
+    const artistName = document.getElementById('spotify-artist');
+    
+    if (spotifyWidget && artistName) {
+        let isPlaying = false;
+        
+        spotifyWidget.addEventListener('click', function() {
+            isPlaying = !isPlaying;
+            
+            if (isPlaying) {
+                artistName.textContent = '⏸';
+            } else {
+                artistName.textContent = '⏯';
+            }
+        });
+        
+        spotifyWidget.style.cursor = 'pointer';
+    }
+}
+
+function initializeBadges() {
+    const badgesContainer = document.getElementById('badges-container');
+    if (!badgesContainer) {
+        console.log('Badges container not found');
+        return;
+    }
+
+    const defaultBadges = [];
+    
+    defaultBadges.forEach(badge => {
+        if (BADGES[badge.key]) {
+            const badgeElement = document.createElement('div');
+            badgeElement.className = 'badge';
+            badgeElement.title = badge.name;
+            badgeElement.innerHTML = `
+                <img src="${BADGES[badge.key]}" alt="${badge.name}" onerror="this.style.display='none'">
+            `;
+            badgesContainer.appendChild(badgeElement);
+        }
+    });
+    
+    console.log('✅ Badges loaded successfully');
+}
+
+function updateDiscordBadges(userData) {
+    const badgesContainer = document.getElementById('badges-container');
+    if (!badgesContainer || !userData.discord_user) return;
+
+    const discordBadges = userData.discord_user.public_flags_array || [];
+    
+    discordBadges.forEach(badge => {
+        const badgeKey = badge.toLowerCase();
+        if (BADGES[badgeKey]) {
+            const existingBadge = badgesContainer.querySelector(`[data-badge="${badgeKey}"]`);
+            if (!existingBadge) {
+                const badgeElement = document.createElement('div');
+                badgeElement.className = 'badge discord-badge';
+                badgeElement.setAttribute('data-badge', badgeKey);
+                badgeElement.innerHTML = `
+                    <img src="${BADGES[badgeKey]}" alt="${badge}" title="${badge}">
+                `;
+                badgesContainer.appendChild(badgeElement);
+            }
+        }
+    });
+
+    if (userData.discord_user.premium_type && userData.discord_user.premium_type > 0) {
+        const nitroBadgeKey = 'nitro';
+        const existingNitroBadge = badgesContainer.querySelector(`[data-badge="${nitroBadgeKey}"]`);
+        if (!existingNitroBadge && BADGES[nitroBadgeKey]) {
+            const badgeElement = document.createElement('div');
+            badgeElement.className = 'badge discord-badge';
+            badgeElement.setAttribute('data-badge', nitroBadgeKey);
+            badgeElement.innerHTML = `
+                <img src="${BADGES[nitroBadgeKey]}" alt="Nitro" title="Nitro Subscriber">
+            `;
+            badgesContainer.appendChild(badgeElement);
+        }
+    }
+}
+
+function initializeTypingEffect() {
+    const typingText = document.querySelector('.typing-text');
+    if (!typingText) return;
+    
+    const texts = [
+        'It\'s okay to be a skid',
+        'why are you here',
+        'what are you looking for',
+        'Hmm, I kind of like you',
+        '>.<'
+    ];
+    
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeWriter() {
+        const currentText = texts[textIndex];
+        
+        if (isDeleting) {
+            typingText.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingText.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+        
+        let typeSpeed = isDeleting ? 50 : 100;
+        
+        if (!isDeleting && charIndex === currentText.length) {
+            typeSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            typeSpeed = 500;
+        }
+        
+        setTimeout(typeWriter, typeSpeed);
+    }
+    
+    typeWriter();
+}
+
+function initializeLastSeen() {
+    updateLastSeen();
+}
+
+function updateLastSeen() {
+    const lastSeenElement = document.getElementById('last-seen');
+    if (!lastSeenElement) return;
+    
+    const now = new Date();
+    const timeString = now.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+    
+    lastSeenElement.textContent = `Last seen: ${timeString}`;
+}
+
+async function updateDiscordStatus() {
+    try {
+        const response = await fetch(`https://api.lanyard.rest/v1/users/${CONFIG.DISCORD_USER_ID}`);
+        const data = await response.json();
+        
+        if (data.success && data.data) {
+            const user = data.data;
+            updateDiscordUI(user);
+            updateDiscordBadges(user);
+        }
+    } catch (error) {
+        console.log('Error fetching Discord data:', error);
+    }
+}
+
+function updateDiscordUI(userData) {
+    const avatar = document.getElementById('discord-avatar');
+    const username = document.getElementById('discord-username');
+    const activity = document.getElementById('discord-activity');
+    const statusDot = document.getElementById('discord-status-dot');
+    const statusBadge = document.getElementById('discord-status');
+    const mainAvatar = document.getElementById('main-avatar');
+    const mainStatusDot = document.getElementById('main-status-dot');
+    const mainStatusText = document.getElementById('main-status-text');
+    
+    if (avatar && userData.discord_user) {
+        const avatarUrl = userData.discord_user.avatar 
+            ? `https://cdn.discordapp.com/avatars/${userData.discord_user.id}/${userData.discord_user.avatar}.png?size=128`
+            : `https://cdn.discordapp.com/embed/avatars/${userData.discord_user.discriminator % 5}.png`;
+        
+        avatar.src = avatarUrl;
+        if (mainAvatar) mainAvatar.src = avatarUrl;
+    }
+    
+    if (username && userData.discord_user) {
+        username.textContent = userData.discord_user.global_name || userData.discord_user.username;
+    }
+    
+    const status = userData.discord_status || 'offline';
+    if (statusDot) {
+        statusDot.className = `status-indicator ${status}`;
+    }
+    if (statusBadge) {
+        statusBadge.className = `status-badge ${status}`;
+    }
+    
+    if (mainStatusDot) {
+        mainStatusDot.className = `status-dot ${status}`;
+    }
+    
+    const statusTexts = {
+        'online': 'Online - Available 4You',
+        'idle': 'Away - Will reply later',
+        'dnd': 'Do not disturb - Busy',
+        'offline': 'Offline - Leave a message'
+    };
+    
+    if (mainStatusText) {
+        mainStatusText.textContent = statusTexts[status] || 'Unknown status';
+    }
+    
+    if (activity) {
+        const activityText = activity.querySelector('.activity-text');
+        if (userData.activities && userData.activities.length > 0) {
+            const customStatus = userData.activities.find(act => act.type === 4);
+            if (customStatus) {
+                const emoji = customStatus.emoji ? `${customStatus.emoji.name} ` : '';
+                const state = customStatus.state || '';
+                activityText.textContent = `${emoji}${state}`.trim() || 'Custom Status';
+            } else {
+                const currentActivity = userData.activities[0];
+                if (currentActivity.type === 0) { 
+                    activityText.textContent = `Playing ${currentActivity.name}`;
+                } else if (currentActivity.type === 2) { 
+                    activityText.textContent = `Listening to ${currentActivity.name}`;
+                } else if (currentActivity.type === 3) { 
+                    activityText.textContent = `Watching ${currentActivity.name}`;
+                } else {
+                    activityText.textContent = currentActivity.name;
+                }
+            }
+        } else {
+            const activityStatusTexts = {
+                'online': 'Online',
+                'idle': 'Away',
+                'dnd': 'Do Not Disturb',
+                'offline': 'Offline'
+            };
+            activityText.textContent = activityStatusTexts[status] || 'Offline';
+        }
+    }
+}
+
+async function updateSpotifyStatus() {
+    try {
+        const response = await fetch(`https://api.lanyard.rest/v1/users/${CONFIG.DISCORD_USER_ID}`);
+        const data = await response.json();
+        
+        if (data.success && data.data && data.data.spotify) {
+            updateSpotifyUI(data.data.spotify);
+        } else {
+            updateSpotifyUI(null);
+        }
+    } catch (error) {
+        console.log('Error fetching Spotify data:', error);
+        updateSpotifyUI(null);
+    }
+}
+
+function updateSpotifyProgress() {
+    if (!currentSpotifyData) return;
+    
+    const progressFill = document.getElementById('spotify-progress');
+    const currentTimeElement = document.getElementById('current-time');
+    const totalTimeElement = document.getElementById('total-time');
+    
+    const progress = ((Date.now() - currentSpotifyData.timestamps.start) / (currentSpotifyData.timestamps.end - currentSpotifyData.timestamps.start)) * 100;
+    const clampedProgress = Math.min(Math.max(progress, 0), 100);
+    
+    if (progressFill) {
+        progressFill.style.width = `${clampedProgress}%`;
+    }
+    
+    const currentMs = Date.now() - currentSpotifyData.timestamps.start;
+    const totalMs = currentSpotifyData.timestamps.end - currentSpotifyData.timestamps.start;
+    
+    if (currentTimeElement) {
+        currentTimeElement.textContent = formatTime(Math.max(0, currentMs));
+    }
+    if (totalTimeElement) {
+        totalTimeElement.textContent = formatTime(totalMs);
+    }
+}
+
+function updateSpotifyUI(spotifyData) {
+    const trackElement = document.getElementById('spotify-track');
+    const artistElement = document.getElementById('spotify-artist');
+    const albumElement = document.getElementById('spotify-album');
+    const albumContainer = document.querySelector('.album-container');
+    const playingIndicator = document.getElementById('spotify-playing');
+    const progressContainer = document.getElementById('spotify-progress-container');
+    
+    currentSpotifyData = spotifyData;
+    
+    if (spotifyData) {
+        if (trackElement) trackElement.textContent = spotifyData.song;
+        if (artistElement) artistElement.textContent = spotifyData.artist;
+        if (albumElement) {
+            albumElement.src = spotifyData.album_art_url;
+            albumElement.classList.add('visible');
+        }
+        if (albumContainer) {
+            albumContainer.classList.remove('hidden');
+        }
+        
+        if (playingIndicator) {
+            playingIndicator.classList.add('playing');
+        }
+        
+        if (progressContainer) {
+            progressContainer.classList.add('visible');
+        }
+        
+        updateSpotifyProgress();
+    } else {
+        if (trackElement) trackElement.textContent = 'Not playing';
+        if (artistElement) artistElement.textContent = '-';
+        if (albumElement) {
+            albumElement.src = '';
+            albumElement.classList.remove('visible'); 
+        }
+        if (albumContainer) {
+            albumContainer.classList.add('hidden');
+        }
+        if (playingIndicator) {
+            playingIndicator.classList.remove('playing');
+        }
+        if (progressContainer) {
+            progressContainer.classList.remove('visible');
+        }
+    }
+}
+
+function formatTime(ms) {
+    const seconds = Math.floor(ms / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+}
+
+function showNotification(title, message, type = 'success', duration = 3000) {
+    const existingNotifications = document.querySelectorAll('.notification');
+    existingNotifications.forEach(notif => notif.remove());
+    
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    
+    const icon = type === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-circle';
+    
+    notification.innerHTML = `
+        <div class="notification-icon">
+            <i class="${icon}"></i>
+        </div>
+        <div class="notification-content">
+            <div class="notification-title">${title}</div>
+            <div class="notification-message">${message}</div>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10);
+    
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.remove();
+            }
+        }, 300);
+    }, duration);
+}
+
+async function copyToClipboard(text) {
+    try {
+        if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+            return true;
+        } else {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            const result = document.execCommand('copy');
+            textArea.remove();
+            return result;
+        }
+    } catch (err) {
+        console.error('Error copying:', err);
+        return false;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initializeCursor();
+    initializeEntryPage();
+});
+    </script>
+    <script>
+var snowStorm = (function(window, document) {
+  this.autoStart = true;
+  this.excludeMobile = true;
+  this.flakesMax = 128;
+  this.flakesMaxActive = 64;
+  this.animationInterval = 33;
+  this.useGPU = true;
+  this.className = null;
+  this.excludeMobile = true;
+  this.flakeBottom = null;
+  this.followMouse = true;
+  this.snowColor = '#fff';
+  this.snowCharacter = '&bull;';
+  this.snowStick = true;
+  this.targetElement = null;
+  this.useMeltEffect = true;
+  this.useTwinkleEffect = false;
+  this.usePositionFixed = false;
+  this.usePixelPosition = false;
+  this.freezeOnBlur = true;
+  this.flakeLeftOffset = 0;
+  this.flakeRightOffset = 0;
+  this.flakeWidth = 8;
+  this.flakeHeight = 8;
+  this.vMaxX = 5;
+  this.vMaxY = 4;
+  this.zIndex = 0;
+
+  var storm = this,
+  features,
+  isIE = navigator.userAgent.match(/msie/i),
+  isIE6 = navigator.userAgent.match(/msie 6/i),
+  isMobile = navigator.userAgent.match(/mobile|opera m(ob|in)/i),
+  isBackCompatIE = (isIE && document.compatMode === 'BackCompat'),
+  noFixed = (isBackCompatIE || isIE6),
+  screenX = null, screenX2 = null, screenY = null, scrollY = null, docHeight = null, vRndX = null, vRndY = null,
+  windOffset = 1,
+  windMultiplier = 2,
+  flakeTypes = 6,
+  fixedForEverything = false,
+  targetElementIsRelative = false,
+  opacitySupported = (function(){
+    try {
+      document.createElement('div').style.opacity = '0.5';
+    } catch(e) {
+      return false;
+    }
+    return true;
+  }()),
+  didInit = false,
+  docFrag = document.createDocumentFragment();
+
+  features = (function() {
+    function timeoutShim(callback) {
+      window.setTimeout(callback, 1000/(storm.animationInterval || 20));
+    }
+    var _animationFrame = (window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        timeoutShim);
+    var getAnimationFrame = _animationFrame ? function() {
+      return _animationFrame.apply(window, arguments);
+    } : null;
+    var testDiv = document.createElement('div');
+    function has(prop) {
+      var result = testDiv.style[prop];
+      return (result !== undefined ? prop : null);
+    }
+    var localFeatures = {
+      transform: {
+        ie:  has('-ms-transform'),
+        moz: has('MozTransform'),
+        opera: has('OTransform'),
+        webkit: has('webkitTransform'),
+        w3: has('transform'),
+        prop: null
+      },
+      getAnimationFrame: getAnimationFrame
+    };
+    localFeatures.transform.prop = (
+      localFeatures.transform.w3 || 
+      localFeatures.transform.moz ||
+      localFeatures.transform.webkit ||
+      localFeatures.transform.ie ||
+      localFeatures.transform.opera
+    );
+    testDiv = null;
+    return localFeatures;
+  }());
+
+  this.timer = null;
+  this.flakes = [];
+  this.disabled = false;
+  this.active = false;
+  this.meltFrameCount = 20;
+  this.meltFrames = [];
+
+  this.setXY = function(o, x, y) {
+    if (!o) return false;
+    if (storm.usePixelPosition || targetElementIsRelative) {
+      o.style.left = (x - storm.flakeWidth) + 'px';
+      o.style.top = (y - storm.flakeHeight) + 'px';
+    } else if (noFixed) {
+      o.style.right = (100-(x/screenX*100)) + '%';
+      o.style.top = (Math.min(y, docHeight-storm.flakeHeight)) + 'px';
+    } else {
+      if (!storm.flakeBottom) {
+        o.style.right = (100-(x/screenX*100)) + '%';
+        o.style.bottom = (100-(y/screenY*100)) + '%';
+      } else {
+        o.style.right = (100-(x/screenX*100)) + '%';
+        o.style.top = (Math.min(y, docHeight-storm.flakeHeight)) + 'px';
+      }
+    }
+  };
+
+  this.events = (function() {
+    var old = (!window.addEventListener && window.attachEvent), slice = Array.prototype.slice,
+    evt = {
+      add: (old?'attachEvent':'addEventListener'),
+      remove: (old?'detachEvent':'removeEventListener')
+    };
+    function getArgs(oArgs) {
+      var args = slice.call(oArgs), len = args.length;
+      if (old) {
+        args[1] = 'on' + args[1];
+        if (len > 3) args.pop();
+      } else if (len === 3) {
+        args.push(false);
+      }
+      return args;
+    }
+    function apply(args, sType) {
+      var element = args.shift(),
+          method = [evt[sType]];
+      if (old) {
+        element[method](args[0], args[1]);
+      } else {
+        element[method].apply(element, args);
+      }
+    }
+    function addEvent() { apply(getArgs(arguments), 'add'); }
+    function removeEvent() { apply(getArgs(arguments), 'remove'); }
+    return { add: addEvent, remove: removeEvent };
+  }());
+
+  function rnd(n,min) {
+    if (isNaN(min)) min = 0;
+    return (Math.random()*n)+min;
+  }
+  function plusMinus(n) {
+    return (parseInt(rnd(2),10)===1?n*-1:n);
+  }
+
+  this.randomizeWind = function() {
+    var i;
+    vRndX = plusMinus(rnd(storm.vMaxX,0.2));
+    vRndY = rnd(storm.vMaxY,0.2);
+    if (this.flakes) {
+      for (i=0; i<this.flakes.length; i++) {
+        if (this.flakes[i].active) {
+          this.flakes[i].setVelocities();
+        }
+      }
+    }
+  };
+
+  this.scrollHandler = function() {
+    var i;
+    scrollY = (storm.flakeBottom ? 0 : parseInt(window.scrollY || document.documentElement.scrollTop || (noFixed ? document.body.scrollTop : 0), 10));
+    if (isNaN(scrollY)) scrollY = 0;
+    if (!fixedForEverything && !storm.flakeBottom && storm.flakes) {
+      for (i=0; i<storm.flakes.length; i++) {
+        if (storm.flakes[i].active === 0) {
+          storm.flakes[i].stick();
+        }
+      }
+    }
+  };
+
+  this.resizeHandler = function() {
+    if (window.innerWidth || window.innerHeight) {
+      screenX = window.innerWidth - 16 - storm.flakeRightOffset;
+      screenY = (storm.flakeBottom || window.innerHeight);
+    } else {
+      screenX = (document.documentElement.clientWidth || document.body.clientWidth || document.body.scrollWidth) - (!isIE ? 8 : 0) - storm.flakeRightOffset;
+      screenY = storm.flakeBottom || document.documentElement.clientHeight || document.body.clientHeight || document.body.scrollHeight;
+    }
+    docHeight = document.body.offsetHeight;
+    screenX2 = parseInt(screenX/2,10);
+  };
+
+  this.resizeHandlerAlt = function() {
+    screenX = storm.targetElement.offsetWidth - storm.flakeRightOffset;
+    screenY = storm.flakeBottom || storm.targetElement.offsetHeight;
+    screenX2 = parseInt(screenX/2,10);
+    docHeight = document.body.offsetHeight;
+  };
+
+  this.freeze = function() {
+    if (!storm.disabled) {
+      storm.disabled = 1;
+    } else {
+      return false;
+    }
+    storm.timer = null;
+  };
+
+  this.resume = function() {
+    if (storm.disabled) {
+       storm.disabled = 0;
+    } else {
+      return false;
+    }
+    storm.timerInit();
+  };
+
+  this.toggleSnow = function() {
+    if (!storm.flakes.length) {
+      storm.start();
+    } else {
+      storm.active = !storm.active;
+      if (storm.active) {
+        storm.show();
+        storm.resume();
+      } else {
+        storm.stop();
+        storm.freeze();
+      }
+    }
+  };
+
+  this.stop = function() {
+    var i;
+    this.freeze();
+    for (i=0; i<this.flakes.length; i++) {
+      this.flakes[i].o.style.display = 'none';
+    }
+    storm.events.remove(window,'scroll',storm.scrollHandler);
+    storm.events.remove(window,'resize',storm.resizeHandler);
+    if (storm.freezeOnBlur) {
+      if (isIE) {
+        storm.events.remove(document,'focusout',storm.freeze);
+        storm.events.remove(document,'focusin',storm.resume);
+      } else {
+        storm.events.remove(window,'blur',storm.freeze);
+        storm.events.remove(window,'focus',storm.resume);
+      }
+    }
+  };
+
+  this.show = function() {
+    var i;
+    for (i=0; i<this.flakes.length; i++) {
+      this.flakes[i].o.style.display = 'block';
+    }
+  };
+
+  this.SnowFlake = function(type,x,y) {
+    var s = this;
+    this.type = type;
+    this.x = x||parseInt(rnd(screenX-20),10);
+    this.y = (!isNaN(y)?y:-rnd(screenY)-12);
+    this.vX = null;
+    this.vY = null;
+    this.vAmpTypes = [1,1.2,1.4,1.6,1.8];
+    this.vAmp = this.vAmpTypes[this.type] || 1;
+    this.melting = false;
+    this.meltFrameCount = storm.meltFrameCount;
+    this.meltFrames = storm.meltFrames;
+    this.meltFrame = 0;
+    this.twinkleFrame = 0;
+    this.active = 1;
+    this.fontSize = (10+(this.type/5)*10);
+    this.o = document.createElement('div');
+    this.o.innerHTML = storm.snowCharacter;
+    if (storm.className) {
+      this.o.setAttribute('class', storm.className);
+    }
+    this.o.style.color = storm.snowColor;
+    this.o.style.position = (fixedForEverything?'fixed':'absolute');
+    if (storm.useGPU && features.transform.prop) {
+      this.o.style[features.transform.prop] = 'translate3d(0px, 0px, 0px)';
+    }
+    this.o.style.width = storm.flakeWidth+'px';
+    this.o.style.height = storm.flakeHeight+'px';
+    this.o.style.fontFamily = 'arial,verdana';
+    this.o.style.cursor = 'default';
+    this.o.style.overflow = 'hidden';
+    this.o.style.fontWeight = 'normal';
+    this.o.style.zIndex = storm.zIndex;
+    docFrag.appendChild(this.o);
+
+    this.refresh = function() {
+      if (isNaN(s.x) || isNaN(s.y)) return false;
+      storm.setXY(s.o, s.x, s.y);
+    };
+
+    this.stick = function() {
+      if (noFixed || (storm.targetElement !== document.documentElement && storm.targetElement !== document.body)) {
+        s.o.style.top = (screenY+scrollY-storm.flakeHeight)+'px';
+      } else if (storm.flakeBottom) {
+        s.o.style.top = storm.flakeBottom+'px';
+      } else {
+        s.o.style.display = 'none';
+        s.o.style.bottom = '0%';
+        s.o.style.position = 'fixed';
+        s.o.style.display = 'block';
+      }
+    };
+
+    this.vCheck = function() {
+      if (s.vX>=0 && s.vX<0.2) s.vX = 0.2;
+      else if (s.vX<0 && s.vX>-0.2) s.vX = -0.2;
+      if (s.vY>=0 && s.vY<0.2) s.vY = 0.2;
+    };
+
+    this.move = function() {
+      var vX = s.vX*windOffset, yDiff;
+      s.x += vX;
+      s.y += (s.vY*s.vAmp);
+      if (s.x >= screenX || screenX-s.x < storm.flakeWidth) s.x = 0;
+      else if (vX < 0 && s.x-storm.flakeLeftOffset < -storm.flakeWidth) s.x = screenX-storm.flakeWidth-1;
+      s.refresh();
+      yDiff = screenY+scrollY-s.y+storm.flakeHeight;
+      if (yDiff<storm.flakeHeight) {
+        s.active = 0;
+        if (storm.snowStick) s.stick();
+        else s.recycle();
+      } else {
+        if (storm.useMeltEffect && s.active && s.type < 3 && !s.melting && Math.random()>0.998) {
+          s.melting = true;
+          s.melt();
+        }
+        if (storm.useTwinkleEffect) {
+          if (s.twinkleFrame < 0) {
+            if (Math.random() > 0.97) s.twinkleFrame = parseInt(Math.random() * 8, 10);
+          } else {
+            s.twinkleFrame--;
+            if (!opacitySupported) {
+              s.o.style.visibility = (s.twinkleFrame && s.twinkleFrame % 2 === 0 ? 'hidden' : 'visible');
+            } else {
+              s.o.style.opacity = (s.twinkleFrame && s.twinkleFrame % 2 === 0 ? 0 : 1);
+            }
+          }
+        }
+      }
+    };
+
+    this.animate = function() {
+      s.move();
+    };
+
+    this.setVelocities = function() {
+      s.vX = vRndX+rnd(storm.vMaxX*0.12,0.1);
+      s.vY = vRndY+rnd(storm.vMaxY*0.12,0.1);
+    };
+
+    this.setOpacity = function(o,opacity) {
+      if (!opacitySupported) return false;
+      o.style.opacity = opacity;
+    };
+
+    this.melt = function() {
+      if (!storm.useMeltEffect || !s.melting) {
+        s.recycle();
+      } else {
+        if (s.meltFrame < s.meltFrameCount) {
+          s.setOpacity(s.o,s.meltFrames[s.meltFrame]);
+          s.o.style.fontSize = s.fontSize-(s.fontSize*(s.meltFrame/s.meltFrameCount))+'px';
+          s.o.style.lineHeight = storm.flakeHeight+2+(storm.flakeHeight*0.75*(s.meltFrame/s.meltFrameCount))+'px';
+          s.meltFrame++;
+        } else {
+          s.recycle();
+        }
+      }
+    };
+
+    this.recycle = function() {
+      s.o.style.display = 'none';
+      s.o.style.position = (fixedForEverything?'fixed':'absolute');
+      s.o.style.bottom = 'auto';
+      s.setVelocities();
+      s.vCheck();
+      s.meltFrame = 0;
+      s.melting = false;
+      s.setOpacity(s.o,1);
+      s.o.style.padding = '0px';
+      s.o.style.margin = '0px';
+      s.o.style.fontSize = s.fontSize+'px';
+      s.o.style.lineHeight = (storm.flakeHeight+2)+'px';
+      s.o.style.textAlign = 'center';
+      s.o.style.verticalAlign = 'baseline';
+      s.x = parseInt(rnd(screenX-storm.flakeWidth-20),10);
+      s.y = parseInt(rnd(screenY)*-1,10)-storm.flakeHeight;
+      s.refresh();
+      s.o.style.display = 'block';
+      s.active = 1;
+    };
+
+    this.recycle();
+    this.refresh();
+  };
+
+  this.snow = function() {
+    var active = 0, flake = null, i, j;
+    for (i=0, j=storm.flakes.length; i<j; i++) {
+      if (storm.flakes[i].active === 1) {
+        storm.flakes[i].move();
+        active++;
+      }
+      if (storm.flakes[i].melting) {
+        storm.flakes[i].melt();
+      }
+    }
+    if (active<storm.flakesMaxActive) {
+      flake = storm.flakes[parseInt(rnd(storm.flakes.length),10)];
+      if (flake.active === 0) {
+        flake.melting = true;
+      }
+    }
+    if (storm.timer) {
+      features.getAnimationFrame(storm.snow);
+    }
+  };
+
+  this.mouseMove = function(e) {
+    if (!storm.followMouse) return true;
+    var x = parseInt(e.clientX,10);
+    if (x<screenX2) {
+      windOffset = -windMultiplier+(x/screenX2*windMultiplier);
+    } else {
+      x -= screenX2;
+      windOffset = (x/screenX2)*windMultiplier;
+    }
+  };
+
+  this.createSnow = function(limit,allowInactive) {
+    var i;
+    for (i=0; i<limit; i++) {
+      storm.flakes[storm.flakes.length] = new storm.SnowFlake(parseInt(rnd(flakeTypes),10));
+      if (allowInactive || i>storm.flakesMaxActive) {
+        storm.flakes[storm.flakes.length-1].active = -1;
+      }
+    }
+    storm.targetElement.appendChild(docFrag);
+  };
+
+  this.timerInit = function() {
+    storm.timer = true;
+    storm.snow();
+  };
+
+  this.init = function() {
+    var i;
+    for (i=0; i<storm.meltFrameCount; i++) {
+      storm.meltFrames.push(1-(i/storm.meltFrameCount));
+    }
+    storm.randomizeWind();
+    storm.createSnow(storm.flakesMax);
+    storm.events.add(window,'resize',storm.resizeHandler);
+    storm.events.add(window,'scroll',storm.scrollHandler);
+    if (storm.freezeOnBlur) {
+      if (isIE) {
+        storm.events.add(document,'focusout',storm.freeze);
+        storm.events.add(document,'focusin',storm.resume);
+      } else {
+        storm.events.add(window,'blur',storm.freeze);
+        storm.events.add(window,'focus',storm.resume);
+      }
+    }
+    storm.resizeHandler();
+    storm.scrollHandler();
+    if (storm.followMouse) {
+      storm.events.add(isIE?document:window,'mousemove',storm.mouseMove);
+    }
+    storm.animationInterval = Math.max(20,storm.animationInterval);
+    storm.timerInit();
+  };
+
+  this.start = function(bFromOnLoad) {
+    if (!didInit) didInit = true;
+    else if (bFromOnLoad) return true;
+    if (typeof storm.targetElement === 'string') {
+      var targetID = storm.targetElement;
+      storm.targetElement = document.getElementById(targetID);
+      if (!storm.targetElement) throw new Error('Snowstorm: Unable to get targetElement "'+targetID+'"');
+    }
+    if (!storm.targetElement) {
+      storm.targetElement = (document.body || document.documentElement);
+    }
+    if (storm.targetElement !== document.documentElement && storm.targetElement !== document.body) {
+      storm.resizeHandler = storm.resizeHandlerAlt;
+      storm.usePixelPosition = true;
+    }
+    storm.resizeHandler();
+    storm.usePositionFixed = (storm.usePositionFixed && !noFixed && !storm.flakeBottom);
+    if (window.getComputedStyle) {
+      try {
+        targetElementIsRelative = (window.getComputedStyle(storm.targetElement, null).getPropertyValue('position') === 'relative');
+      } catch(e) {
+        targetElementIsRelative = false;
+      }
+    }
+    fixedForEverything = storm.usePositionFixed;
+    if (screenX && screenY && !storm.disabled) {
+      storm.init();
+      storm.active = true;
+    }
+  };
+
+  function doDelayedStart() {
+    window.setTimeout(function() {
+      storm.start(true);
+    }, 20);
+    storm.events.remove(isIE?document:window,'mousemove',doDelayedStart);
+  }
+
+  function doStart() {
+    if (!storm.excludeMobile || !isMobile) doDelayedStart();
+    storm.events.remove(window, 'load', doStart);
+  }
+
+  if (storm.autoStart) {
+    storm.events.add(window, 'load', doStart, false);
+  }
+
+  return this;
+}(window, document));
+    </script>
+
+<div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 136.482px; top: -268.481px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1351.84px; top: 401.384px;">•</div><div style="color: rgb(255, 255, 255); position: fixed; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: 0%; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 163.099px; top: 948.352px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1559.09px; top: -685.22px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1239.25px; top: 194.021px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 535.078px; top: -149.147px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1217.86px; top: -431.281px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 598.882px; top: 517.408px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1743.52px; top: 115.272px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 149.84px; top: 814.415px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1542.33px; top: 336.707px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 43.6624px; top: 274.755px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1649.39px; top: 206.402px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 150.41px; top: 105.025px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 975.643px; top: 725.374px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1401.76px; top: 286.541px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1270.2px; top: 146.406px;">•</div><div style="color: rgb(255, 255, 255); position: fixed; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: 0%; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 776.561px; top: 949.217px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 325.047px; top: 479.736px;">•</div><div style="color: rgb(255, 255, 255); position: fixed; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: 0%; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 534.417px; top: 948.106px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 659.059px; top: -117.308px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 866.062px; top: 849.558px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 688.747px; top: -699px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1859.15px; top: -767.538px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 141.006px; top: -212.621px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1853.16px; top: 580.881px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1070.69px; top: -471.958px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1745.93px; top: -817.428px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1552.01px; top: 496.176px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1263.67px; top: 644.164px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1875.83px; top: -482.871px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 841.452px; top: -90.9011px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1856.43px; top: -120.13px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1616.99px; top: -594.425px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1696.6px; top: 535.222px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 827.876px; top: -138.421px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 955.382px; top: -723.616px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 404.328px; top: 204.12px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1604.96px; top: 839.619px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 897.151px; top: -786.756px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1735.14px; top: 872.852px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 896.196px; top: 228.505px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1350.5px; top: 707.285px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 751.075px; top: 480.267px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 140.007px; top: -680.236px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 288.283px; top: 463.102px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1752.22px; top: -85.5206px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 88.0329px; top: -55.1999px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1335.82px; top: 370.636px;">•</div><div style="color: rgb(255, 255, 255); position: fixed; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: 0%; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 432.568px; top: 948.466px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 600.08px; top: -156.705px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 316.029px; top: 320.945px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1000.92px; top: 297.007px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 576.841px; top: 167.465px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1338.57px; top: -230.772px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 571.751px; top: 91.4515px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1058.68px; top: 133.781px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1311.03px; top: 793.729px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1351.97px; top: 297.046px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1653.94px; top: 186.622px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1525.31px; top: 889.72px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1100.23px; top: -15.1454px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 811.263px; top: 718.487px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1832.07px; top: 742.335px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 822.913px; top: -197.056px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1157px; top: -657px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1619px; top: -928px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 677px; top: -281px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1494px; top: -477px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1082px; top: -886px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1007px; top: -904px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 768px; top: -833px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 685px; top: -16px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1218px; top: -265px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 524px; top: -332px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1090px; top: -436px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 190px; top: -580px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 283px; top: -299px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1225px; top: -74px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1279px; top: -255px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1135px; top: -822px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 98px; top: -587px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1503px; top: -616px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1442px; top: -467px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1489px; top: -911px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1080px; top: -733px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1791px; top: -178px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1624px; top: -297px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 843px; top: -308px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1355px; top: -706px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 589px; top: -874px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 402px; top: -284px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1582px; top: -503px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1588px; top: -208px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 835px; top: -657px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1833px; top: -551px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1491px; top: -569px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1252px; top: -25px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1521px; top: -814px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1500px; top: -569px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 767px; top: -443px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 282px; top: -793px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1577px; top: -293px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1649px; top: -118px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1109px; top: -35px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 745px; top: -479px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 16px; line-height: 10px; text-align: center; vertical-align: baseline; left: 551px; top: -69px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1401px; top: -131px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 235px; top: -327px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 368px; top: -779px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 613px; top: -665px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 255px; top: -19px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 229px; top: -540px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1288px; top: -278px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1485px; top: -309px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 454px; top: -143px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 618px; top: -497px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 395px; top: -869px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 370px; top: -145px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1015px; top: -656px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1060px; top: -646px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 129px; top: -246px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 14px; line-height: 10px; text-align: center; vertical-align: baseline; left: 305px; top: -897px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 12px; line-height: 10px; text-align: center; vertical-align: baseline; left: 956px; top: -594px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1299px; top: -548px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 10px; line-height: 10px; text-align: center; vertical-align: baseline; left: 729px; top: -876px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 20px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1278px; top: -75px;">•</div><div style="color: rgb(255, 255, 255); position: absolute; transform: translate3d(0px, 0px, 0px); width: 8px; height: 8px; font-family: arial, verdana; overflow: hidden; font-weight: normal; z-index: 0; display: block; bottom: auto; opacity: 1; padding: 0px; margin: 0px; font-size: 18px; line-height: 10px; text-align: center; vertical-align: baseline; left: 1692px; top: -845px;">•</div></body></html>
